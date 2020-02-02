@@ -1,5 +1,4 @@
-require 'rack'
-require 'rack/handler/puma'
+require 'pry'
 
 class App
   def call(env)
@@ -18,11 +17,10 @@ class App
 
   def body(env)
     [
-      '<svg xmlns="http://www.w3.org/2000/svg">',
-        '<text x="20" y="30">Hello World</text>',
-      '</svg>'
+      "<svg xmlns='http://www.w3.org/2000/svg'>",
+      "<text x='20' y='30'>Referer: #{env['HTTP_REFERER']}</text>",
+      "<text x='20' y='60'>Referer: #{env['REMOTE_ADDR']}</text>",
+      "</svg>"
     ]
   end
 end
-
-Rack::Handler::Puma.run(App.new)

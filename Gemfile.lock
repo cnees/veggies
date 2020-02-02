@@ -1,15 +1,47 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (5.2.4.1)
+      activesupport (= 5.2.4.1)
+    activerecord (5.2.4.1)
+      activemodel (= 5.2.4.1)
+      activesupport (= 5.2.4.1)
+      arel (>= 9.0)
+    activesupport (5.2.4.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    arel (9.0.0)
+    coderay (1.1.2)
+    concurrent-ruby (1.1.5)
+    i18n (1.8.2)
+      concurrent-ruby (~> 1.0)
+    method_source (0.9.2)
+    minitest (5.14.0)
     nio4r (2.5.2)
+    pg (1.2.2)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     puma (4.3.1)
       nio4r (~> 2.0)
+    rack (2.1.2)
+    stockfish (0.3.1)
+    thread_safe (0.3.6)
+    tzinfo (1.2.6)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
+  pg
+  pry
   puma
+  rack
+  stockfish
 
 BUNDLED WITH
-   1.17.3
+   2.1.4
